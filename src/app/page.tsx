@@ -67,31 +67,7 @@ export default function HomePage() {
 
   return (
     <>
-      {/* This inline style is for the animations. It would typically go in a global CSS file. */}
-      <style jsx global>{`
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* light gray background */
-        }
-        .text-gradient {
-            background: linear-gradient(to right, #4f46e5, #ec4899);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        /* Animation classes */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        .reveal-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-      `}</style>
+      {/* All styling is now handled by the global stylesheet (app/globals.css) */}
       
       {/* Header & Navigation */}
       <header id="header" className="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm transition-all duration-300">
@@ -370,7 +346,7 @@ export default function HomePage() {
                         </div>
                         <div className="mt-6">
                             <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-                            <textarea id="message" name="message" rows="4" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
+                            <textarea id="message" name="message" rows={4} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
                         </div>
                         <div className="mt-8 text-right">
                              <button type="submit" className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition shadow">Send Message</button>
